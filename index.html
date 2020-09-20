@@ -15,6 +15,34 @@
     <body>
         <h1>Spotblock</h1>
 
-        <script></script>
+        <form id="access-form" method="POST">
+            <h4>Full Name*</h4>
+            <input name="fullName" type="text" id="nameInput" placeholder="Richard Hendricks" value="Mark Zuckerberg" required>
+            <h4>Email*</h4>
+            <input name="email" type="email" id="emailInput" placeholder="richard@piedpiper.com" value="mark@facebook.com" required>
+            <h4>Message</h4>
+            <input name="message" type="text" id="messageInput" placeholder="How can we help you?" value="Yo! It's Zuck!">
+            <button>Submit</button>
+        </form>
+
+        <script>
+            const form = document.querySelector('form')
+            const formData = {
+                "id": Math.random()*100000000000000000,
+                "fullName": form.nameInput.value,
+                "email": form.emailInput.value,
+                "message": form.messageInput.value
+            }
+
+            form.onsubmit= e => {
+                try {
+                    console.log(formData)
+                    await 
+                    alert('Success!')
+                } catch (err) {
+                    alert('Unable to put product. Error:' + statusCode)
+                }
+            }            
+        </script>
     </body>
 </html>

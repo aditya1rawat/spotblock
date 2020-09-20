@@ -1,0 +1,26 @@
+{
+  "name": "spotblock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevalinKetcham/spotblock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevalinKetcham/spotblock/issues"
+  },
+  "homepage": "https://github.com/KevalinKetcham/spotblock#readme",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
