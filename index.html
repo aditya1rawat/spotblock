@@ -89,19 +89,19 @@
                 <div id="access-form">
                     <h1 id="take-off-heading" class="main-heading">Take off!</h1>
                     <h4 id="exclusivity-subheading" class="main-subheading">only 7 spots left</h4>
-                    <form>
+                    <form id="form-contents">
                         <span id="fullNameItem">
-                            <label for="fullNameInput">Full Name*</label><br>
-                            <input id="fullNameInput" name="fullName" type="text" placeholder="Richard Hendricks" value="" required><br>
+                            <label for="fullName">Full Name*</label><br>
+                            <input id="fullNameInput" name="fullName" type="text" placeholder="Richard Hendricks" required><br>
                         </span>
                         <span id="emailItem">
-                            <label for="emailInput">Email*</label><br>
-                            <input id="emailInput" name="email" type="email" placeholder="richard@piedpiper.com" value="" required><br>
+                            <label for="email">Email*</label><br>
+                            <input id="emailInput" name="email" type="email" placeholder="richard@piedpiper.com" required><br>
                         </span> 
                         <div id="messageItem">
-                            <label for="messageInput">Message</label><br>
+                            <label for="message">Message</label><br>
                             <!-- <input id="messageInput" name="message" type="text" placeholder="How can we help you?" value=""> -->
-                            <textarea id="messageInput" placeholder="How can we help you?" rows="5" cols="80"></textarea>
+                            <textarea id="messageInput" name="message" placeholder="How can we help you?" rows="5" cols="80"></textarea>
                         </div>
                         <button id="final-cta">
                             <span id="top">Let's make this happen!</span>
@@ -111,13 +111,14 @@
                 </div>
             </div>
         </div>
-        <div id="backgroundElement1" class="color"></div>
-        <div id="backgroundElement2" class="color"></div>
-        <div id="backgroundElement3" class="color"></div>
-        <div id="backgroundElement4" class="color"></div>
-        <div id="backgroundElement5" class="color"></div>
-        <div id="backgroundElement6" class="color"></div>
-        <div id="backgroundElement7" class="color"></div>
+        <div id="backgroundElement1" class="grey"></div>
+        <div id="backgroundElement2" class="green"></div>
+        <div id="backgroundElement3" class="blue"></div>
+        <div id="backgroundElement4" class="grey"></div>
+        <div id="backgroundElement5" class="green"></div>
+        <div id="backgroundElement6" class="blue"></div>
+        <div id="backgroundElement7" class="grey"></div>
+        <div id="backgroundElement8" class="green"></div>
         <!-- Form JS -->
         <script>
             // Learn More Button Scroll
@@ -141,23 +142,24 @@
 
             function closeModal() {
                 accessForm.style.display = 'none';
-            }
+            };
 
             // Form Submission
-            const form = document.querySelector('form')
-            const invokeURL = 'https://ngibxc7k6g.execute-api.us-west-2.amazonaws.com/prod'
-            const formData = {
-                "id": String(Math.random()*100000000000000000),
-                "fullName": form.nameInput.value,
-                "email": form.emailInput.value,
-                "message": form.messageInput.value
-            }
-        
-            form.onsubmit= async(e) => {
+            const form = document.getElementById('form-contents');
+            const invokeURL = 'https://ngibxc7k6g.execute-api.us-west-2.amazonaws.com/prod';
+
+            form.onsubmit = async(e) => {
                 e.preventDefault();
                 try {
+                    const formData = {
+                        "id": String(Math.random()*100000000000000000),
+                        "fullName": form.fullNameInput.value,
+                        "email": form.emailInput.value,
+                        "message": form.messageInput.value
+                    };
                     console.log(formData)
                     await axios.post('${invokeURL}/access-form', formData)
+                    form.reset()
                     alert('Thanks! We\'ll get back to you in 2hrs.')
                 } catch (err) {
                     console.log(err)

@@ -277,19 +277,85 @@ form #final-cta {
 
 /* Background Elements */
 .green {
-    /* color */
+    background-color: rgba(21, 127, 31, 0.1);
 }
 
 .blue {
-    /* color */
+    background-color: rgba(160, 234, 222, 0.1);
 }
 
 .grey {
-    /* color */
+    background-color: rgba(92, 103, 132, 0.1);
 }
 
-/* Temporary Color */
-.temp {
-    background-color: orange;
+#backgroundElement1 {
+    width: 20%;
+    height: 15%;
+    top: 25%;
+    left: 20%;
+    position: absolute;
+    z-index: -1;
 }
 
+#backgroundElement2 {
+    width: 10%;
+    height: 25%;
+    top: 60%;
+    left: 5%;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundElement3 {
+    width: 40%;
+    height: 40%;
+    top: 70%;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundElement4 {
+    width: 20%;
+    height: 40%;
+    top: 120%;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundElement5 {
+    width: 10%;
+    height: 15%;
+    top: 140%;
+    right: 20%;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundElement6 {
+    width: 15%;
+    height: 35%;
+    top: 185%;
+    left: 10%;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundElement7 {
+    width: 20%;
+    height: 50%;
+    top: 200%;
+    right: 2%;
+    position: absolute;
+    z-index: -1;
+}
+
+#backgroundElement8 {
+    width:10%;
+    height: 20%;
+    top: 255%;
+    left: 1%;
+    position: absolute;
+    z-index: -1;
+}
