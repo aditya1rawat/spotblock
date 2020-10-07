@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="logo.svg"/>
+        <title>Spotblock</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div id="access-form-page-content">
+                <img id="escape-button" src="./escape-button.svg" alt="close access form">
+                <img id="validation" src="./validation.svg" alt="customer validation">
+                <div id="access-form">
+                    <h1 id="take-off-heading" class="main-heading">Take off!</h1>
+                    <h4 id="exclusivity-subheading" class="main-subheading">only 7 spots left</h4>
+                    <form>
+                        <span id="fullNameItem">
+                            <label for="fullNameInput">Full Name*</label><br>
+                            <input id="fullNameInput" name="fullName" type="text" placeholder="Richard Hendricks" value="" required><br>
+                        </span>
+                        <span id="emailItem">
+                            <label for="emailInput">Email*</label><br>
+                            <input id="emailInput" name="email" type="email" placeholder="richard@piedpiper.com" value="" required><br>
+                        </span> 
+                        <div id="messageItem">
+                            <label for="messageInput">Message</label><br>
+                            <!-- <input id="messageInput" name="message" type="text" placeholder="How can we help you?" value=""> -->
+                            <textarea id="messageInput" placeholder="How can we help you?" rows="5" cols="80"></textarea>
+                        </div>
+                        <button id="final-cta">
+                            <span id="top">Let's make this happen!</span>
+                            <span id="bottom">We'll get back to you in 2hrs.</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form JS -->
+        <script>
+            const form = document.querySelector('form')
+            const invokeURL = 'https://ngibxc7k6g.execute-api.us-west-2.amazonaws.com/prod'
+            const formData = {
+                "id": String(Math.random()*100000000000000000),
+                "fullName": form.nameInput.value,
+                "email": form.emailInput.value,
+                "message": form.messageInput.value
+            }
+
+            form.onsubmit= async(e) => {
+                e.preventDefault();
+                try {
+                    console.log(formData)
+                    await axios.post('${invokeURL}/access-form', formData)
+                    alert('Thanks! We\'ll get back to you in 2hrs.')
+                } catch (err) {
+                    console.log(err)
+                    alert('Unable to send data. Please email kevalin@spotblock.io for further assistance. Sorry for the inconvenience.')
+                }
+            }            
+        </script>
+    </body>
+</html>

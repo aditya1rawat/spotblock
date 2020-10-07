@@ -1,48 +1,170 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="icon" type="image/png" href="logo.svg"/>
         <title>Spotblock</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+        </script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
-        <h1>Spotblock</h1>
-
-        <form id="access-form" method="POST">
-            <h4>Full Name*</h4>
-            <input name="fullName" type="text" id="nameInput" placeholder="Richard Hendricks" value="Mark Zuckerberg" required>
-            <h4>Email*</h4>
-            <input name="email" type="email" id="emailInput" placeholder="richard@piedpiper.com" value="mark@facebook.com" required>
-            <h4>Message</h4>
-            <input name="message" type="text" id="messageInput" placeholder="How can we help you?" value="Yo! It's Zuck!">
-            <button>Submit</button>
-        </form>
-
+        <div class="main">
+            <nav>
+                <div class="branding">
+                    <img class="logo" src="logo.svg" alt="logo">
+                    <span id="name">Spotblock</span>
+                </div>  
+            </nav>
+            <div id="landing-page-content">
+                <div class="heading-subheading">
+                    <h1 class="main-heading">Lauched but not taking off?</h1>
+                    <h4 class="main-subheading">We’ll help your startup take off using the strategies that unicorns like Uber, AirBnB, and Stripe used.</h4>
+                </div>
+                <button id="learn-more-btn" class="cta"><span>Learn More</span></button>
+            </div>
+            <div id="before-after-page-content">
+                <p id="before">
+                    <b>Before Spotblock:</b>
+                    You’re telling everyone you know and word of mouth isn’t spreading. You’re 
+                    constantly adding features, talking to investors, contacting journalists, and nobody seems to care!
+                </p>
+                <p id="after">
+                    <span class="bold">After Spotblock:</span>
+                    “The customers are buying the product just as fast as you can make it -- or usage is 
+                    growing just as fast as you can add more servers. Money from customers is piling up in your company 
+                    checking account. You're hiring sales and customer support staff as fast as you can.” 
+                </p>
+                <div id="andreessen-profile">
+                    <img class="user-image" src="andreessen.svg" alt="andreessen">
+                    <div>
+                        <h3 class="bold">Marc Andreessen</h3>
+                        <h4>Billionare Venture Capitalist, on PMF</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="our-process-page-content">
+                <h2 class="heading">Our Process</h4>
+                <div id="our-process-steps-container">
+                    <div class="step">
+                        <img class="illustration" src="./spotblockEvaluateIllustration.svg" alt="evaluate illustration">
+                        <h2>1. Evaluate</h2>
+                        <p>Our skilled team will analize your product and market and figure out why your not taking off.</p>
+                    </div>
+                    <div class="step">
+                        <img class="illustration" src="./spotblockExperimentIllustration.svg" alt="experiment illustration">
+                        <h2>2. Experiment</h2>
+                        <p>We’ll help you experiment and measure key proformance indicators. Our state of the art 
+                            tactics will help get you to product market fit.</p>
+                    </div>
+                    <div class="step">
+                        <img class="illustration" src="./spotblockExpandIllustration.svg" alt="expand illustration">
+                        <h2>3. Expand</h2>
+                        <p>We’ll help you expand while increasing growth, retention, and profitability. Our skilled 
+                            team will help you run ads, build signup funnels, optimize notification delivery, etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="about-us-page-content">
+                <h2 class="heading">Say hello to your new growth team!</h4>
+                <p>We’re an <span class="bold">experienced</span> growth team made up of entreupreneurs, programmers, and creators. We’ll gladly 
+                    help you with our broad range of expertise.</p>
+                <p><span class="bold">Our #1 goal is to help your startup take off.</span> We take pride in providing you with stellar 
+                    customer service and delivering excellent results.</p>
+                <p>So, simply <span class="bold">reserve your spot</span> by clicking the button below.</p>
+                <button id="get-access-button" class="cta"><span>Get Access</span></button>
+            </div>
+            <div id="access-form-page-content">
+                <img id="escape-button" src="./escape-button.svg" alt="close access form">
+                <img id="validation" src="./validation.svg" alt="customer validation">
+                <div id="access-form">
+                    <h1 id="take-off-heading" class="main-heading">Take off!</h1>
+                    <h4 id="exclusivity-subheading" class="main-subheading">only 7 spots left</h4>
+                    <form>
+                        <span id="fullNameItem">
+                            <label for="fullNameInput">Full Name*</label><br>
+                            <input id="fullNameInput" name="fullName" type="text" placeholder="Richard Hendricks" value="" required><br>
+                        </span>
+                        <span id="emailItem">
+                            <label for="emailInput">Email*</label><br>
+                            <input id="emailInput" name="email" type="email" placeholder="richard@piedpiper.com" value="" required><br>
+                        </span> 
+                        <div id="messageItem">
+                            <label for="messageInput">Message</label><br>
+                            <!-- <input id="messageInput" name="message" type="text" placeholder="How can we help you?" value=""> -->
+                            <textarea id="messageInput" placeholder="How can we help you?" rows="5" cols="80"></textarea>
+                        </div>
+                        <button id="final-cta">
+                            <span id="top">Let's make this happen!</span>
+                            <span id="bottom">We'll get back to you in 2hrs.</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="backgroundElement1" class="color"></div>
+        <div id="backgroundElement2" class="color"></div>
+        <div id="backgroundElement3" class="color"></div>
+        <div id="backgroundElement4" class="color"></div>
+        <div id="backgroundElement5" class="color"></div>
+        <div id="backgroundElement6" class="color"></div>
+        <div id="backgroundElement7" class="color"></div>
+        <!-- Form JS -->
         <script>
+            // Learn More Button Scroll
+            $('#learn-more-btn').click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#before-after-page-content").offset().top
+                }, 1000);
+            });
+
+            // Form Modal
+            const getAccessFormBtn = document.getElementById('get-access-button');
+            const accessForm = document.getElementById('access-form-page-content');
+            const escapeBtn = document.getElementById('escape-button');
+
+            getAccessFormBtn.addEventListener('click', openModal);
+            escapeBtn.addEventListener('click', closeModal);
+
+            function openModal() {
+                accessForm.style.display = 'block';
+            }
+
+            function closeModal() {
+                accessForm.style.display = 'none';
+            }
+
+            // Form Submission
             const form = document.querySelector('form')
+            const invokeURL = 'https://ngibxc7k6g.execute-api.us-west-2.amazonaws.com/prod'
             const formData = {
-                "id": Math.random()*100000000000000000,
+                "id": String(Math.random()*100000000000000000),
                 "fullName": form.nameInput.value,
                 "email": form.emailInput.value,
                 "message": form.messageInput.value
             }
-
-            form.onsubmit= e => {
+        
+            form.onsubmit= async(e) => {
+                e.preventDefault();
                 try {
                     console.log(formData)
-                    await 
-                    alert('Success!')
+                    await axios.post('${invokeURL}/access-form', formData)
+                    alert('Thanks! We\'ll get back to you in 2hrs.')
                 } catch (err) {
-                    alert('Unable to put product. Error:' + statusCode)
+                    console.log(err)
+                    alert('Unable to send data. Please email kevalin@spotblock.io for further assistance. Sorry for the inconvenience.')
                 }
             }            
         </script>
+        </div>
     </body>
 </html>
