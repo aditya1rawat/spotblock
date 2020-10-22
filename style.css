@@ -5,6 +5,57 @@ body .main {
     font-family: 'Mulish', sans-serif;
 }
 
+/* Landing Page */
+#embedded-substack {
+    top: 100px;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#embedded-tweet {
+    top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+@media (max-width: 500px) {
+    #embedded-tweet {
+        top: 90%;
+        left: auto;
+        right: auto;
+        position: absolute;
+    }
+}
+
+#landingBackgroundElement1 {
+    width: 20%;
+    height: 15%;
+    top: 5%;
+    left: 5%;
+    position: absolute;
+    z-index: -1;
+}
+
+#landingBackgroundElement2 {
+    width: 10%;
+    height: 15%;
+    bottom: 25%;
+    left: 10%;
+    position: absolute;
+    z-index: -1;
+}
+
+#landingBackgroundElement3 {
+    width: 35%;
+    height: 75%;
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Hire Us Page */
 .branding {
     margin: 20px 0;
     cursor: pointer;
