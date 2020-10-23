@@ -1,2 +1,1 @@
 # Spotblock
-Startup growth consultancy.
