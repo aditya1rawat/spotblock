@@ -134,26 +134,25 @@ body .main {
 
 /* Our Services Page Content */
 #our-services-page-content {
-    margin-top: 10%;
+    margin: 10% 10% 0 10%;
 }
 
-.heading {
-
+div #services-headings {
+    margin: 0 4.16% 40px 4.16%;
 }
 
 #our-services-container {
-    margin: 0 10%;
     display: inline-flex;
 }
 
 #our-services-container .step {
-    width: 25%;
+    width: 100%;
     margin: 0 4.16%;
 }
 
 #our-services-container .step .illustration {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 90px;
 }
 
 .step h2 {
@@ -166,20 +165,20 @@ body .main {
     font-weight: 100;
 }
 
-@media (max-width: 1200px) {
-    #our-services-container .step {
-        background-color: yellow;
+@media (max-width: 800px) {
+    #our-services-container {
+        display: block;
     }
 }
 
 /* About Us Page Content */
 #about-us-page-content {
-    width: 60%;
-    margin: 10% 20% 200px 20%;
+    margin: 10% 14.16% 50px 14.16%;
 }
 
 #about-us-page-content h2 {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 #about-us-page-content p {
@@ -190,6 +189,10 @@ body .main {
     margin: 100px auto 0 auto;
     background: linear-gradient(45deg, #00ccff, #ff0000);
     display: block;
+}
+
+.twitter-validation {
+    text-align: center;
 }
 
 /* Access Form Page Content */

@@ -42,33 +42,68 @@
                 <button id="learn-more-btn" class="cta"><span>Learn More</span></button>
             </div>
             <div id="our-services-page-content">
-                <h2 class="heading">Our Services</h4>
-                <p>With these services your acquisition, retention, revenue, engagement, among other metrics are dramatically increased.</p>
+                <div id="services-headings">
+                    <h2 class="heading">Our Services</h4>
+                    <p>With our services your acquisition, retention, revenue, engagement, among other metrics are dramatically increased.</p>
+                </div>
                 <div id="our-services-container">
                     <div class="step">
-                        <img class="illustration" src="./spotblockEvaluateIllustration.svg" alt="evaluate illustration">
+                        <img class="illustration" src="./growthMarketing.png" alt="growth marketing illustration">
                         <h2>Growth Marketing</h2>
-                        <p>Our skilled team will analyze your product and market. We'll then figure out why you're not taking off.</p>
+                        <p>The math behind customer acquisition.</p>
+                        <p>Our skilled team will scale your startup with SEO, Email marketing, Paid Acqusition, Online Advertising, Mobile marketing, etc.</p>
                     </div>
                     <div class="step">
-                        <img class="illustration" src="./spotblockExperimentIllustration.svg" alt="experiment illustration">
+                        <img class="illustration" src="./brand.png" alt="brand illustration">
                         <h2>Brand</h2>
-                        <p>Our state of the art strategies will get you to product-market fit.</p>
+                        <p>What sets your startup apart.</p>
+                        <p>We'll help you with PR, Video Marketing, Brand Marketing, Content Marketing, etc.</p>
                     </div>
                     <div class="step">
-                        <img class="illustration" src="./spotblockExpandIllustration.svg" alt="expand illustration">
+                        <img class="illustration" src="./growthProduct.png" alt="growth product illustration">
                         <h2>Growth Product</h2>
-                        <p>Our experienced team will run ads, build signup funnels, optimize notification delivery, and much more.</p>
+                        <p>Features & elements that make your startup take off.</p>
+                        <p>Our team will build your Viral/Referral features, User-to-user notifications, NUX (New User Experience), etc.</p>
                     </div>
                 </div>
             </div>
             <div id="about-us-page-content">
                 <h2 class="heading">Say hello to your new growth team!</h4>
-                <p>We’re an <span class="bold"></span>experienced</span> growth team made up of entrepreneurs, programmers, and creators. 
-                    We’ll gladly help you with our broad range of expertise.</p>
-                <p><span class="bold">Our #1 goal is to help your startup take off.</span> We take pride in providing you with stellar customer service and delivering excellent results.</p>
-                <p>So, simply <span class="bold">reserve your spot</span> by clicking the button below.</p>
+                <p>
+                    We’re a <span class="bold">skilled growth team</span> made up of entrepreneurs, programmers, and creators.
+                    We’ll gladly help you with our broad range of expertise.
+                </p>
+                <p>
+                    We can play the role of your growth engineer, PM, data analyst, marketer, & designer.
+                </p>
+                <p>
+                    As a startup, you need an agile service. 
+                    That’s why we operate in rapid cycles. 
+                    You tell us what you require and we'll quickly give you a time & cost estimate. 
+                    We're here to serve you 7 days a week. 
+                    <span class="bold">Efficiency & speed are top priorities.</span>
+                </p>
+                <p>
+                    With this model, <span class="bold">you pay for what you need when you need it.</span>  
+                    Startups are rapidly changing and we understand that. 
+                    <span class="bold">We’re a digital marketing agency built around startups.</span>
+                </p>
+                <p>
+                    Our #1 goal is to help your startup take off. 
+                    We take pride in providing you with stellar customer service and delivering excellent results.
+                </p>
+                <p>
+                    So, simply <span class="bold">reserve your spot</span> by clicking the button below.
+                </p>
                 <button id="get-access-button" class="cta"><span>Get Access</span></button>
+            </div>
+            <div class="twitter-validation">
+                <img src="stars.svg" alt="validation stars">
+                <blockquote class="twitter-tweet tw-align-center">
+                    <p lang="und" dir="ltr">
+                        <a href="https://t.co/IbUlJAdRkN">https://t.co/IbUlJAdRkN</a>
+                    </p>&mdash; Marques Brownlee (@MKBHD) <a href="https://twitter.com/MKBHD/status/1319450149807116289?ref_src=twsrc%5Etfw">October 23, 2020</a>
+                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div id="access-form-page-content">
                 <img id="escape-button" src="./escape-button.svg" alt="close access form">
@@ -114,7 +149,7 @@
             // Learn More Button Scroll
             $('#learn-more-btn').click(function() {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#before-after-page-content").offset().top
+                    scrollTop: $("#our-services-page-content").offset().top
                 }, 1000);
             });
 
