@@ -32,7 +32,8 @@
                 <div class="branding">
                     <img class="logo" src="logo.svg" alt="logo">
                     <span id="name">Spotblock</span>
-                </div>  
+                    <button id="hire-us-page-newsletter-sign-up-btn" class="error-redirect-btn" style="background-color: #E8F2E9"><a href="index.html" style="color: black;">newsletter sign up</a></button>
+                </div>
             </nav>
             <div id="landing-page-content">
                 <div class="heading-subheading">
@@ -146,6 +147,13 @@
         <div id="backgroundElement8" class="green"></div>
         <!-- Form JS -->
         <script>
+            // Learn More Button Scroll
+            $('#learn-more-btn').click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("#our-services-page-content").offset().top
+                }, 1000);
+            });
+
             // Learn More Button Scroll
             $('#learn-more-btn').click(function() {
                 $([document.documentElement, document.body]).animate({

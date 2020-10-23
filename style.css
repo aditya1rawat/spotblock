@@ -91,6 +91,12 @@ body .main {
     font-size: 1.5rem;
 }
 
+#hire-us-page-newsletter-sign-up-btn {
+    right: 11%;
+    position: absolute;
+    margin: auto 0;
+}
+
 /* Landing Page Content */
 #landing-page-content {
     margin: 15% 0; 
