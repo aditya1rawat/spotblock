@@ -1,205 +1,218 @@
 <!DOCTYPE html>
-    <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="icon" type="image/png" href="logo.svg"/>
-        <title>Hire Us | Spotblock</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
-        <script
-        src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous">
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="img/logo.svg" />
+    <title>Hire Us | Spotblock</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
         </script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics Below -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180257577-1">
-        </script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-180257577-1');
-        </script>
-        <!-- Global site tag (gtag.js) - Google Analytics Above -->
-    </head>
-    <body>
-        <div class="main">
-            <nav>
-                <div class="branding">
-                    <img class="logo" src="logo.svg" alt="logo">
-                    <span id="name">Spotblock</span>
-                    <button id="hire-us-page-newsletter-sign-up-btn" class="error-redirect-btn" style="background-color: #E8F2E9"><a href="index.html" style="color: black;">newsletter sign up</a></button>
-                </div>
-            </nav>
-            <div id="landing-page-content">
-                <div class="heading-subheading">
-                    <h1 class="main-heading">External startup growth team</h1>
-                    <h4 class="main-subheading">We’ll help you take off using the same strategies that unicorns like Uber, Airbnb, and Stripe used.</h4>
-                </div>
-                <button id="learn-more-btn" class="cta"><span>Learn More</span></button>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics Below -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180257577-1">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-180257577-1');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics Above -->
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="branding">
+                <img class="logo" src="assets/logo.svg" alt="logo">
+                <span id="name">Spotblock</span>
+                <button id="hire-us-page-newsletter-sign-up-btn" class="error-redirect-btn"
+                    style="background-color: #E8F2E9"><a href="index.html" style="color: black;">newsletter sign
+                        up</a></button>
             </div>
-            <div id="our-services-page-content">
-                <div id="services-headings">
-                    <h2 class="heading">Our Services</h4>
-                    <p>With our services your acquisition, retention, revenue, engagement, among other metrics are <span class="bold">dramatically increased.</span></p>
+        </nav>
+        <div id="landing-page-content">
+            <div class="heading-subheading">
+                <h1 class="main-heading">External startup growth team</h1>
+                <h4 class="main-subheading">We’ll help you take off using the same strategies that unicorns like Uber,
+                    Airbnb, and Stripe used.</h4>
+            </div>
+            <button id="learn-more-btn" class="cta"><span>Learn More</span></button>
+        </div>
+        <div id="our-services-page-content">
+            <div id="services-headings">
+                <h2 class="heading">Our Services</h4>
+                    <p>With our services your acquisition, retention, revenue, engagement, among other metrics are <span
+                            class="bold">dramatically increased.</span></p>
+            </div>
+            <div id="our-services-container">
+                <div class="step">
+                    <img class="illustration" src="assets/img/growthMarketing.png" alt="growth marketing illustration">
+                    <h2><b>Growth Marketing</b></h2>
+                    <p>The math behind customer acquisition.</p>
+                    <p>Our skilled team will scale your startup with SEO, Email marketing, Paid Acqusition, Online
+                        Advertising, Mobile marketing, etc.</p>
                 </div>
-                <div id="our-services-container">
-                    <div class="step">
-                        <img class="illustration" src="./growthMarketing.png" alt="growth marketing illustration">
-                        <h2><b>Growth Marketing</b></h2>
-                        <p>The math behind customer acquisition.</p>
-                        <p>Our skilled team will scale your startup with SEO, Email marketing, Paid Acqusition, Online Advertising, Mobile marketing, etc.</p>
-                    </div>
-                    <div class="step">
-                        <img class="illustration" src="./brand.png" alt="brand illustration">
-                        <h2><b>Brand</b></h2>
-                        <p>What sets your startup apart.</p>
-                        <p>We'll help you with PR, Video Marketing, Brand Marketing, Content Marketing, etc.</p>
-                    </div>
-                    <div class="step">
-                        <img class="illustration" src="./growthProduct.png" alt="growth product illustration">
-                        <h2><b>Growth Product</b></h2>
-                        <p>Features & elements that make your startup take off.</p>
-                        <p>Our team will build your Viral/Referral features, User-to-user notifications, NUX (New User Experience), etc.</p>
-                    </div>
+                <div class="step">
+                    <img class="illustration" src="assets/img/brand.png" alt="brand illustration">
+                    <h2><b>Brand</b></h2>
+                    <p>What sets your startup apart.</p>
+                    <p>We'll help you with PR, Video Marketing, Brand Marketing, Content Marketing, etc.</p>
+                </div>
+                <div class="step">
+                    <img class="illustration" src="assets/img/growthProduct.png" alt="growth product illustration">
+                    <h2><b>Growth Product</b></h2>
+                    <p>Features & elements that make your startup take off.</p>
+                    <p>Our team will build your Viral/Referral features, User-to-user notifications, NUX (New User
+                        Experience), etc.</p>
                 </div>
             </div>
-            <div id="about-us-page-content">
-                <h2 class="heading">Say hello to your new growth team!</h4>
+        </div>
+        <div id="about-us-page-content">
+            <h2 class="heading">Say hello to your new growth team!</h4>
                 <p>
-                    We’re a <span class="bold">skilled growth team</span> made up of entrepreneurs, programmers, and creators.
+                    We’re a <span class="bold">skilled growth team</span> made up of entrepreneurs, programmers, and
+                    creators.
                     We’ll gladly help you with our broad range of expertise.
                 </p>
                 <p>
                     We can play the role of your growth engineer, PM, data analyst, marketer, & designer.
                 </p>
                 <p>
-                    As a startup, you need an agile service. 
-                    That’s why we operate in rapid cycles. 
-                    You tell us what you require and we'll quickly give you a time & cost estimate. 
-                    We're here to serve you 7 days a week. 
+                    As a startup, you need an agile service.
+                    That’s why we operate in rapid cycles.
+                    You tell us what you require and we'll quickly give you a time & cost estimate.
+                    We're here to serve you 7 days a week.
                     <span class="bold">Efficiency & speed are top priorities.</span>
                 </p>
                 <p>
-                    With this model, <span class="bold">you pay for what you need when you need it.</span>  
-                    Startups are rapidly changing and we understand that. 
+                    With this model, <span class="bold">you pay for what you need when you need it.</span>
+                    Startups are rapidly changing and we understand that.
                     <span class="bold">We’re a digital marketing agency built around startups.</span>
                 </p>
                 <p>
-                    Our #1 goal is to help your startup take off. 
+                    Our #1 goal is to help your startup take off.
                     We take pride in providing you with stellar customer service and delivering excellent results.
                 </p>
                 <p>
                     So, simply <span class="bold">reserve your spot</span> by clicking the button below.
                 </p>
                 <button id="get-access-button" class="cta"><span>Get Access</span></button>
-            </div>
-            <div class="twitter-validation">
-                <img src="stars.svg" alt="validation stars">
-                <blockquote class="twitter-tweet tw-align-center">
-                    <p lang="und" dir="ltr">
-                        <a href="https://t.co/IbUlJAdRkN">https://t.co/IbUlJAdRkN</a>
-                    </p>&mdash; Marques Brownlee (@MKBHD) <a href="https://twitter.com/MKBHD/status/1319450149807116289?ref_src=twsrc%5Etfw">October 23, 2020</a>
-                </blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-            <div id="access-form-page-content">
-                <img id="escape-button" src="./escape-button.svg" alt="close access form">
-                <img id="validation" src="./validation.svg" alt="customer validation">
-                <div id="access-form">
-                    <h1 id="take-off-heading" class="main-heading">Take off!</h1>
-                    <h4 id="exclusivity-subheading" class="main-subheading">only 7 spots left</h4>
-                    <form id="form-contents">
-                        <span id="fullNameItem">
-                            <label for="fullName">Full Name*</label><br>
-                            <input id="fullNameInput" name="fullName" type="text" placeholder="Richard Hendricks" required><br>
-                        </span>
-                        <span id="emailItem">
-                            <label for="email">Email*</label><br>
-                            <input id="emailInput" name="email" type="email" placeholder="richard@piedpiper.com" required><br>
-                        </span> 
-                        <div id="messageItem">
-                            <label for="message">Message</label><br>
-                            <!-- <input id="messageInput" name="message" type="text" placeholder="How can we help you?" value=""> -->
-                            <textarea id="messageInput" name="message" placeholder="How can we help you?" rows="5" cols="80"></textarea>
-                        </div>
-                        <button id="final-cta">
-                            <span id="top">Let's make this happen!</span>
-                            <span id="bottom">We'll get back to you in 2hrs.</span>
-                        </button>
-                    </form>
-                </div>
-                <div id="formBackgroundElement1" class="grey"></div>
-                <div id="formBackgroundElement2" class="blue"></div>
-                <div id="formBackgroundElement3" class="green"></div>
-            </div>
         </div>
-        <div id="backgroundElement1" class="grey"></div>
-        <div id="backgroundElement2" class="green"></div>
-        <div id="backgroundElement3" class="blue"></div>
-        <div id="backgroundElement4" class="grey"></div>
-        <div id="backgroundElement5" class="green"></div>
-        <div id="backgroundElement6" class="blue"></div>
-        <div id="backgroundElement7" class="grey"></div>
-        <div id="backgroundElement8" class="green"></div>
-        <!-- Form JS -->
-        <script>
-            // Learn More Button Scroll
-            $('#learn-more-btn').click(function() {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#our-services-page-content").offset().top
-                }, 1000);
-            });
+        <div class="twitter-validation">
+            <img src="assets/stars.svg" alt="validation stars">
+            <blockquote class="twitter-tweet tw-align-center">
+                <p lang="und" dir="ltr">
+                    <a href="https://t.co/IbUlJAdRkN">https://t.co/IbUlJAdRkN</a>
+                </p>&mdash; Marques Brownlee (@MKBHD) <a
+                    href="https://twitter.com/MKBHD/status/1319450149807116289?ref_src=twsrc%5Etfw">October 23, 2020</a>
+            </blockquote>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div id="access-form-page-content">
+            <img id="escape-button" src="assets/escape-button.svg" alt="close access form">
+            <img id="validation" src="assets/validation.svg" alt="customer validation">
+            <div id="access-form">
+                <h1 id="take-off-heading" class="main-heading">Take off!</h1>
+                <h4 id="exclusivity-subheading" class="main-subheading">only 7 spots left</h4>
+                <form id="form-contents">
+                    <span id="fullNameItem">
+                        <label for="fullName">Full Name*</label><br>
+                        <input id="fullNameInput" name="fullName" type="text" placeholder="Richard Hendricks"
+                            required><br>
+                    </span>
+                    <span id="emailItem">
+                        <label for="email">Email*</label><br>
+                        <input id="emailInput" name="email" type="email" placeholder="richard@piedpiper.com"
+                            required><br>
+                    </span>
+                    <div id="messageItem">
+                        <label for="message">Message</label><br>
+                        <!-- <input id="messageInput" name="message" type="text" placeholder="How can we help you?" value=""> -->
+                        <textarea id="messageInput" name="message" placeholder="How can we help you?" rows="5"
+                            cols="80"></textarea>
+                    </div>
+                    <button id="final-cta">
+                        <span id="top">Let's make this happen!</span>
+                        <span id="bottom">We'll get back to you in 2hrs.</span>
+                    </button>
+                </form>
+            </div>
+            <div id="formBackgroundElement1" class="grey"></div>
+            <div id="formBackgroundElement2" class="blue"></div>
+            <div id="formBackgroundElement3" class="green"></div>
+        </div>
+    </div>
+    <div id="backgroundElement1" class="grey"></div>
+    <div id="backgroundElement2" class="green"></div>
+    <div id="backgroundElement3" class="blue"></div>
+    <div id="backgroundElement4" class="grey"></div>
+    <div id="backgroundElement5" class="green"></div>
+    <div id="backgroundElement6" class="blue"></div>
+    <div id="backgroundElement7" class="grey"></div>
+    <div id="backgroundElement8" class="green"></div>
+    <!-- Form JS -->
+    <script>
+        // Learn More Button Scroll
+        $('#learn-more-btn').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#our-services-page-content").offset().top
+            }, 1000);
+        });
 
-            // Learn More Button Scroll
-            $('#learn-more-btn').click(function() {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("#our-services-page-content").offset().top
-                }, 1000);
-            });
+        // Learn More Button Scroll
+        $('#learn-more-btn').click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("#our-services-page-content").offset().top
+            }, 1000);
+        });
 
-            // Form Modal
-            const getAccessFormBtn = document.getElementById('get-access-button');
-            const accessForm = document.getElementById('access-form-page-content');
-            const escapeBtn = document.getElementById('escape-button');
+        // Form Modal
+        const getAccessFormBtn = document.getElementById('get-access-button');
+        const accessForm = document.getElementById('access-form-page-content');
+        const escapeBtn = document.getElementById('escape-button');
 
-            getAccessFormBtn.addEventListener('click', openModal);
-            escapeBtn.addEventListener('click', closeModal);
+        getAccessFormBtn.addEventListener('click', openModal);
+        escapeBtn.addEventListener('click', closeModal);
 
-            function openModal() {
-                accessForm.style.display = 'block';
+        function openModal() {
+            accessForm.style.display = 'block';
+        }
+
+        function closeModal() {
+            accessForm.style.display = 'none';
+        };
+
+        // Form Submission
+        const form = document.getElementById('form-contents');
+        const invokeURL = 'https://ngibxc7k6g.execute-api.us-west-2.amazonaws.com/prod';
+
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            try {
+                const formData = {
+                    "id": String(Math.random() * 100000000000000000),
+                    "fullName": form.fullNameInput.value,
+                    "email": form.emailInput.value,
+                    "message": form.messageInput.value
+                };
+                console.log(formData)
+                await axios.post(`${invokeURL}/access-form`, formData)
+                form.reset()
+                alert('Thanks! We\'ll get back to you in 2hrs.')
+            } catch (err) {
+                console.log(err)
+                alert('Unable to send data. Please email kevalin@spotblock.io for further assistance. Sorry for the inconvenience.')
             }
+        }            
+    </script>
+    </div>
+</body>
 
-            function closeModal() {
-                accessForm.style.display = 'none';
-            };
-
-            // Form Submission
-            const form = document.getElementById('form-contents');
-            const invokeURL = 'https://ngibxc7k6g.execute-api.us-west-2.amazonaws.com/prod';
-
-            form.onsubmit = async(e) => {
-                e.preventDefault();
-                try {
-                    const formData = {
-                        "id": String(Math.random()*100000000000000000),
-                        "fullName": form.fullNameInput.value,
-                        "email": form.emailInput.value,
-                        "message": form.messageInput.value
-                    };
-                    console.log(formData)
-                    await axios.post(`${invokeURL}/access-form`, formData)
-                    form.reset()
-                    alert('Thanks! We\'ll get back to you in 2hrs.')
-                } catch (err) {
-                    console.log(err)
-                    alert('Unable to send data. Please email kevalin@spotblock.io for further assistance. Sorry for the inconvenience.')
-                }
-            }            
-        </script>
-        </div>
-    </body>
 </html>
