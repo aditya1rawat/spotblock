@@ -8,6 +8,19 @@
     background-image: linear-gradient(90deg, #4cb9643f, #a0eade3d);
 }
 
+/* Background Element Colors */
+.green {
+    background-color: rgba(21, 127, 31, 0.1);
+}
+
+.blue {
+    background-color: rgba(160, 234, 222, 0.1);
+}
+
+.grey {
+    background-color: rgba(92, 103, 132, 0.1);
+}
+
 /* Landing Page */
 #embedded-substack {
     top: 100px;
@@ -295,19 +308,6 @@ form #final-cta {
 }
 
 /* Background Elements */
-/* Colors */
-.green {
-    background-color: rgba(21, 127, 31, 0.1);
-}
-
-.blue {
-    background-color: rgba(160, 234, 222, 0.1);
-}
-
-.grey {
-    background-color: rgba(92, 103, 132, 0.1);
-}
-/* Main */
 #backgroundElement1 {
     width: 20%;
     height: 15%;
@@ -435,4 +435,32 @@ nav #error-branding {
 .error-redirect-btn a {
     color: grey;
     text-decoration: none;
+}
+
+/* Background Elements */
+#errorBackgroundElement1 {
+    width: 10%;
+    height: 35%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#errorBackgroundElement2 {
+    width: 25%;
+    height: 25%;
+    bottom: 25%;
+    left: 10%;
+    position: absolute;
+    z-index: -1;
+}
+
+#errorBackgroundElement3 {
+    width: 30%;
+    height: 40%;
+    bottom: 0%;
+    right: 0%;
+    position: absolute;
+    z-index: -1;
 }
