@@ -1,8 +1,11 @@
 /* Universal Styles */
-body .main {
-    padding: 0;
-    margin: 0 10%;
+* {    
     font-family: 'Mulish', sans-serif;
+}
+
+.bold {
+    font-weight: bolder;
+    background-image: linear-gradient(90deg, #4cb9643f, #a0eade3d);
 }
 
 /* Landing Page */
@@ -19,13 +22,24 @@ body .main {
     position: relative;
 }
 
-@media (max-width: 500px) {
-    #embedded-tweet {
-        top: 90%;
-        left: auto;
-        right: auto;
-        position: absolute;
-    }
+.newsletter-note {
+    margin-top: 80px;
+    color: grey;
+    text-align: center;
+    position: relative;
+}
+
+#newsletter-contact {
+    font-size: 12px;
+}
+
+#newsletter-copyright {
+    font-size: 8px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .newsletter-note { display: none; }
 }
 
 #landingBackgroundElement1 {
@@ -56,6 +70,11 @@ body .main {
 }
 
 /* Hire Us Page */
+body .main {
+    padding: 0;
+    margin: 0 10%;
+}
+
 .branding {
     margin: 20px 0;
     cursor: pointer;
@@ -113,70 +132,26 @@ body .main {
     font-size: 20px;
 }
 
-/* Before After Page Content */
-#before-after-page-content {
-    width: 40%;
-    margin: 0 30%;
-    align-content: center;
-}
-
-#before-after-page-content #before {
-    margin-bottom: 40px;
-}
-
-.bold {
-    font-weight: bolder;
-    background-image: linear-gradient(90deg, #4cb9643f, #a0eade3d);
-}
-
-#andreessen-profile {
-    width: auto;
-}
-
-#andreessen-profile img {
-    margin: auto;
-    width: 60px;
-    display: inline-block;
-}
-
-#andreessen-profile div {
-    margin-left: 15px;
-    display: inline-block;
-    position: relative;
-    bottom: 10px;
-}
-
-#andreessen-profile h3 {
-    margin-bottom: 0;
-    display: inline-block;
-}
-
-#andreessen-profile h4 {
-    margin-top: 0;
-    color: #5C6784;
-    font-weight: 500;
-}
-
-/* Our Process Page Content */
-#our-process-page-content {
+/* Our Services Page Content */
+#our-services-page-content {
     margin-top: 10%;
 }
 
-#our-process-steps-container {
+.heading {
+
+}
+
+#our-services-container {
     margin: 0 10%;
     display: inline-flex;
 }
 
-.heading {
-    text-align: center;
-}
-
-#our-process-steps-container .step {
+#our-services-container .step {
     width: 25%;
     margin: 0 4.16%;
 }
 
-#our-process-steps-container .step .illustration {
+#our-services-container .step .illustration {
     width: 100px;
     height: 100px;
 }
@@ -192,7 +167,7 @@ body .main {
 }
 
 @media (max-width: 1200px) {
-    #our-process-steps-container .step {
+    #our-services-container .step {
         background-color: yellow;
     }
 }
@@ -421,4 +396,34 @@ form #final-cta {
     left: 20%;
     position: absolute;
     z-index: -1;
+}
+
+/* Error Page */
+nav #error-branding {
+    margin-top: 3%;
+    justify-content: center;
+}
+
+#error-page-content {
+    text-align: center;
+    margin: 20vh;
+}
+
+#error-page-icon {
+    width: 200px;
+}
+
+#error-heading {
+    font-size: 60px;
+}
+
+.error-redirect-btn {
+    height: 30px;
+    margin: 10px;
+    border: none;
+}
+
+.error-redirect-btn a {
+    color: grey;
+    text-decoration: none;
 }
